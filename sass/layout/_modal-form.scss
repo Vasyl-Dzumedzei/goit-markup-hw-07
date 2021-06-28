@@ -47,15 +47,15 @@
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-subscribe-form__input:hover,
-.footer-subscribe-form__input:focus,
-.modal-form__input:hover,
-.modal-form__comment-area:hover,
-.modal-form__input:focus,
-.modal-form__comment-area:focus {
-  border-color: var(--accent-color);
-  outline: none;
-  cursor: pointer;
+
+.modal-form__input,
+.modal-form__comment-area {
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 .modal-form__comment-area {
@@ -84,10 +84,10 @@
   left: 15px;
   top: 47%;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form__input:hover + .modal-form__icon,
-.modal-form__input:focus + .modal-form__icon {
-  fill: var(--accent-color);
+  .modal-form__input:hover + &,
+  .modal-form__input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .checkbox-container {
@@ -130,28 +130,26 @@
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form__checkbox--custom:hover,
-.modal-form__checkbox--custom:focus {
-  border-color: var(--accent-color);
+.modal-form__checkbox--custom {
+  &:hover,
+  &:focus,
+  .modal-checkbox:focus + & {
+    border-color: var(--accent-color);
+  }
+  .modal-form__checkbox-input:checked + & {
+    border-color: transparent;
+    background-color: var(--accent-color);
+    background-size: contain;
+    background-origin: border-box;
+  }
 }
 
-.modal-form__checkbox-input:checked + .modal-form__checkbox--custom {
-  border-color: transparent;
-  background-color: var(--accent-color);
-  background-size: contain;
-  background-origin: border-box;
-}
-
-.modal-form__checkbox-input:checked
-  + .modal-form__checkbox--custom
-  .modal-form__checkbox-icon {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-}
-
-.modal-checkbox:focus + .modal-form__checkbox--custom {
-  border-color: var(--accent-color);
+.modal-form__checkbox-icon {
+  .modal-form__checkbox-input:checked + .modal-form__checkbox--custom & {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+  }
 }
 
 .modal-form__checkbox-text {

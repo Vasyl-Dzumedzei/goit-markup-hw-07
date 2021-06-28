@@ -8,10 +8,9 @@
 
 .offers-container__item {
   margin-right: 30px;
-}
-
-.offers-container__item:last-child {
-  margin-right: 0px;
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 
 .offers-container-thumb {
