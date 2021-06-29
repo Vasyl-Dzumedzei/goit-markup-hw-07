@@ -12,9 +12,6 @@
   margin-right: 30px;
   display: flex;
   align-items: center;
-}
-
-.contacts-list__item {
   &:last-child {
     margin-right: 0px;
   }
@@ -24,10 +21,6 @@
 .contacts-list__icon-phone {
   fill: currentColor;
   margin-right: 10px;
-}
-
-.contacts-list__icon-envelope,
-.contacts-list__icon-phone {
   &:hover {
     fill: currentColor;
   }
